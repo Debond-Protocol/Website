@@ -4,105 +4,112 @@
 
 layout: default
 custom_css:
+- sidebyside
+- technology/technology
 - home/home
 ---
 
-<div class="advertising-contaiter">
-    <div class="advertising-box">
-        <div class="page-title">
-            <div class="item-box">
-                <div class="first-title-box flex-column-end">
-                    <p>Decentralised bonds: Accelerating DeFi 2.0 </p>
-                    <div class="left">
-                        <a class="button" href={{site.webapp_link}}>Use app</a>
-                    </div>
-                </div>
-                <img class="first-adver-img" src="/assets/images/first-adver.svg"/>
-            </div>
-        </div>
-        <div class="fit-screen">
-            <div class="item-box">
-                <div class="flex-column">
-                    <img class="second-adver-img" src="/assets/images/second-adver.svg"/>
-                </div>
-                <div class="first-title-box flex-column-end">
-                    <div class="text-sub-title-right">
-                        <p>The next-level standard for DeFi</p>
-                        <img class="second-adver-img-mobile" src="/assets/images/second-adver.svg"/>
-                        <span>
-                        Decentralised Finance (DeFi) markets are extremely volatile today.
-                        In traditional finance (TradFi), bonds play a stabilising role with their predictable yields.<br/>
-                        We have created the ERC-3475 protocol, to make investments safer
-                        and more stable in DeFi.
-                    </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="fit-screen">
-            <div class="item-box ">
-                <div class="first-title-box">
-                    <p>Financial freedom for everyone</p>
-                    <img class="third-adver-img-mobile" src="/assets/images/third-adver.svg"/>
-                    <span>
-                    {{site.title-styled}} empowers you to create your own blockchain bonds easily
-                    and backed by any kind of digital asset you have — bitcoin,
-                    stablecoins, NFTs, and many more. No more losing your principal,
-                    guaranteed interest payments on fixed-rate prime bonds.
-                </span>
-                </div>
-                <div class="flex-column">
-                    <img class="third-adver-img" src="/assets/images/third-adver.svg"/>
-                </div>
-            </div>
-        </div>
-        <div class="fit-screen">
-            <div class="item-box">
-                <div class="flex-column">
-                    <img class="four-adver-img" src="/assets/images/four-adver.svg"/>
-                </div>
-                <div class="first-title-box">
-                    <div class="text-sub-title-right">
-                        <p>A single platform for your finances</p>
-                        <div class="flex-column-end">
-                            <img class="four-adver-img-mobile" src="/assets/images/four-adver.svg"/>
+<div class="page">
+    <div class="advertising-contaiter">
+        <div class="advertising_box">
+            <div class="page-title">
+                <div class="item-box">
+                    <div class="first-title-box flex-column-end">
+                        <p>Decentralised bonds: <br> Accelerating DeFi 2.0 </p>
+                        <div class="left">
+                            <a class="button" href="/airdrop">Claim Airdrop</a>
                         </div>
-                        <span>
-                        No programming needed. D{{site.debond-slash}}EXCHANGE and D{{site.debond-slash}}WALLET are your simple,
-                        one-stop service to design, issue, and trade {{site.title-styled}}s and
-                        derivatives. Safer blockchain investing, fundraising,
-                        market trading are just a few clicks away.
-                    </span>
                     </div>
+                    <img class="first-adver-img" src="/assets/images/first-adver.svg"/>
                 </div>
             </div>
         </div>
-        <div class="fit-screen-bottom">
-            <div class="item-box">
-                <div class="first-title-box">
-                    <p>Secure and simple</p>
-                    <div class="phone-box-img-mobile">
-                        <img class="fifth-adver-img" src="/assets/images/home/Left_Iphone.svg"/>
-                        <img class="six-adver-img" src="/assets/images/home/Right_Iphone.svg"/>
-                    </div>
-                    <span>
-                    Your easy-to-use wallet keeps all your {{site.title-styled}} assets safe in one place.
-                    No need to download another software or re-generate private keys.
-                    Our wallet is a simple extension of the regular ERC-20 wallets.
-                    Just link your existing wallet by MetaMask or similar services,
-                    and you are ready to go. 
-                </span>
-                    <div class="left">
-                        <a class="button" href={{site.webapp_link}}>USE APP</a>
-                    </div>
+    </div>
+
+
+    <div class="table-container technology fit-screen-top">
+        <div class="debond-table">
+            {% for tech in site.data.technology %}
+            {% include technoItem.html name=tech.title description=tech.description top=tech.number %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid  fit-screen">
+    <img id="round-left" src="assets/images/eip/round-left.png"/>
+    <img id="round-right" src="assets/images/eip/round-right.png"/>
+    <div class="page eip-page">
+        <div class="eip">
+            <div class="eip-text">
+
+                <div class="eip-header">EIP–3475</div>
+                <div class="eip-description">EIP–3475 is a new standard interface for contract that manages multiple
+                    callable
+                    bonds. This standard provides independent functions to read, transfer any collection of bonds, and
+                    for
+                    the issuer to redeem their bonds.
+
+                    This token standard can replace the current ERC–20 LP token.
                 </div>
-                <div class=" flex-column-end">
-                    <div class="phone-box-img">
-                    <img class="fifth-adver-img" src="/assets/images/home/Left_Iphone.svg"/>
-                    <img class="six-adver-img" src="/assets/images/home/Right_Iphone.svg"/>
+                <a class="button black-btn" href={{site.eip}}>EIP documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page second-page">
+    <div class="fit-screen-top">
+        <div class="sidebyside">
+            <div>
+                <img id="introducing" src="assets/images/eip/introducing.png"/>
+            </div>
+            <div>
+                <div class="sbs-header">Introducing <br/> {{site.title-styled}}</div>
+                <div class="sbs-text">
+                    In the Making of a Decentralised Future, {{site.title-styled}} empowers you to
+                    create your own on-chain financial product. A single platform for
+                    your financial needs. No programming needed, you can design and
+                    issue bonds with the backing of Bitcoin, USDC, ETH, NFTs, etc..
+                    <div class="left">
+                        <a class="button" href={{site.webapp_link}}>Launch our webapp</a>
                     </div>
                 </div>
             </div>
+
+        </div>
+    </div>
+    <div class="fit-screen">
+        <div class="table-container works-container">
+            <div class="table-title">How it works</div>
+            <div class="debond-table works">
+                {% for work in site.data.works %}
+                {% include mediaItem.html name=work.name description=work.description path=work.path %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid  fit-screen">
+    <img id="ledger" src="assets/images/technology/ledger.png"/>
+    <div class="page eip-page">
+        <div class="eip">
+            <div class="eip-text ledger-text">
+                <div class="eip-header">New Ledger Support</div>
+                <div class="eip-description">
+                    With Hardware Root of Trust, secure all your crypto operations. Now you can securely use your Ledger Hardware Wallet with D/Bond. No extra installation or extensions needed.
+                </div>
+                <div class="centered">
+                    <a class="button black-btn" href={{site.webapp_link}}>Launch our webapp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="fit-screen">
+    <div class="centered debondh2 fit-screen-bottom" style="display: block">
+        Overlook of the next-generation DeFi solution
+        <div class="centered">
+            <a class="button" href={{site.webapp_link}}> Launch our app</a>
         </div>
     </div>
 </div>

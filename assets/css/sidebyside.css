@@ -1,9 +1,4 @@
-
-
-
-.sidebyside div {
-
-    /*margin: 10px;*/
+.sidebyside  div {
     text-align: center;
     width:100%
 }
@@ -74,5 +69,8 @@
     }
     .sidebyside .sbs-text {
         font-size: 20px;
+    }
+    .sidebyside > div {
+        margin-left: 0px;
     }
 }

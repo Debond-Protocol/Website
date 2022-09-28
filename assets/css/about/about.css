@@ -3,6 +3,11 @@
     width: 90%;
 }
 
+#debond_video{
+    width: 60vw;
+    height: 60vh;
+}
+
 
 .table-container {
     margin-top: 100px;
@@ -11,6 +16,10 @@
 .debond-table .item .item-header img {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
+}
+
+.investors .debond-table .item {
+    margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 375px) {
@@ -26,10 +35,11 @@
 
     .press .debond-table .item {
         height: unset;
-        margin: 20px;
+        /*margin: 20px;*/
     }
 
     .press .debond-table .item img {
         max-height: 140px;
     }
 }
+

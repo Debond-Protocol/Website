@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1., width=device-width">
-    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/page.css">
     <link rel="stylesheet" href="/assets/css/table.css">
@@ -15,13 +15,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
     {% if page.custom_css %}
     {% for stylesheet in page.custom_css %}
     <link rel="stylesheet" href="/assets/css/{{ stylesheet }}.css">
     {% endfor %}
     {% endif %}
     <title>DEBOND</title>
+    {% if site.google_analytics and jekyll.environment == 'production' %}
+    {% include google-analytics.html %}
+    {% endif %}
     <script>
 
         function openMenu() {
@@ -67,12 +74,12 @@
         </div>
         <div class="footer-links-container">
             <div class="footer-links-box">
-                <a href="/technology" class="footer-links-title">Technology</a>
+                <a href="/team" class="footer-links-title">Team</a>
                 <a href="/about" class="footer-links-title">About</a>
             </div>
             <div class="footer-links-box">
-                <a href="/team" class="footer-links-title">Team</a>
                 <a href="/community" class="footer-links-title">Community</a>
+                <a href="/nft" class="footer-links-title">NFT</a>
             </div>
         </div>
         <div class="footer-recourse-box">
@@ -80,11 +87,9 @@
             <div class="footer-recourse-img-box">
                 <a href="https://twitter.com/DebondProtocol" target="_blank"> <img
                         src="/assets/images/twitter-logo.svg"/></a>
-                <a href="https://github.com/DeBond-Protocol/" target="_blank"><img
+                <a href="https://github.com/DeBond-Protocol" target="_blank"><img
                         src="/assets/images/git-hub-logo.svg"/></a>
-                <a href="https://www.reddit.com/user/DebondProtocol" target="_blank"><img
-                        src="/assets/images/d-logo.svg"/></a>
-                <a href="https://discord.gg/Bhq2YEqY" target="_blank"><img src="/assets/images/discord.svg"/></a>
+                <a href={{ site.discord }} target="_blank"><img src="/assets/images/discord.svg"/></a>
                 <a href="https://debond-protocol.medium.com/" target="_blank"><img src="/assets/images/some-1.svg"/></a>
                 <a href="#"><img src="/assets/images/youtube.svg" target="_blank"/></a>
                 <a href="https://t.me/debond_protocol" target="_blank"><img src="/assets/images/telegram.svg"/></a>
@@ -97,4 +102,12 @@
     </div>
 </div>
 </body>
+<footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    {% if page.custom_js %}
+    {% for scriptjs in page.custom_js %}
+    <script src="/assets/js/{{ scriptjs }}.js"></script>
+    {% endfor %}
+    {% endif %}
+</footer>
 </html>

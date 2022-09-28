@@ -1,6 +1,23 @@
+#ledger {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    bottom: 0px;
+    right: -50px;
+    /*z-index: 10;*/
+}
+
+.black-btn {
+    background-color: black;
+    border: none!important;
+}
+.black-btn:hover{
+    color:#403AF4
+}
+
 .second-page {
     margin-top: 0px;
-    padding-top:0px ;
+    padding-top:0px;
 }
 
 .container-fluid {
@@ -25,6 +42,10 @@
 
 .sidebyside {
     margin-top: 100px;
+}
+
+.debond-table {
+    justify-content: space-evenly;
 }
 
 .debond-table .item {
@@ -275,7 +296,15 @@
     }
 }
 
-@media only screen and (min-width: 376px) and (max-width: 767px) {
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+
+    #round-left{
+        right: -200px;
+    }
+
+    #ledger {
+        right: unset;
+    }
 
     .container-fluid {
         height: 630px;
@@ -557,6 +586,7 @@
 
     .table-container {
         /*margin-top: 200px;*/
+        width: 100%;
     }
 
     .debond-table .item {

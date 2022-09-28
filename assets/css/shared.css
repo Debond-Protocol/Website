@@ -1,3 +1,21 @@
+.dot {
+    position:relative;
+}
+.dot div{
+    height: 14px;
+    width: 14px;
+    background-color: #403AF4;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top:10px;
+    right: 0px;
+    left:0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 .left {
     justify-content: left;
     display: flex;
@@ -13,10 +31,17 @@
     font-weight: bolder;
 }
 
+.debond-color-font-bold-white {
+    color: white !important;
+    font-weight: bolder;
+}
+
+
 .fit-screen {
     /*min-height: 100vh;*/
     margin-top: 20vh;
     margin-bottom: 20vh;
+    width: 100%;
     /*display: flex;*/
     /*flex-direction:column;%/
     /*justify-content: center;*/
@@ -24,6 +49,7 @@
 
 .fit-screen-top {
     margin-bottom: 10vh;
+    width: 100%;
 }
 
 .fit-screen-bottom {
@@ -54,6 +80,25 @@
     border: none;
     cursor: pointer;
     text-transform: uppercase;
+}
+
+.menu-button {
+    margin-top: -10px;
+    padding: 15px 50px 15px 50px;
+    display: block;
+    background: #403AF4;
+    font-family: 'Inter'!important;
+    font-style: normal!important;
+    font-weight: 800!important;
+    font-size: 18px!important;
+    line-height: 20px!important;
+    /* or 111% */
+    text-align: center!important;
+    letter-spacing: 0.025em!important;
+
+    /* Debond White */
+    color: #FFFFFF;
+
 }
 
 @media only screen and (max-width: 375px) {
